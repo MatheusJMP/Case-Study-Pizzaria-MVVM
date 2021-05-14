@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pizza_navigation_graph"
+    app:startDestination="@id/pizzaList">
+
+    <fragment
+        android:id="@+id/pizzaList"
+        android:name="br.com.matheus.pizzaapp.features.listPizzas.PizzaListFragment"
+        android:label="pizzaList"
+        tools:layout="@layout/fragment_pizza_list">
+        <action
+            android:id="@+id/action_pizzaList_to_pizzaDetail"
+            app:destination="@id/pizzaDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pizzaDetail"
+        android:name="br.com.matheus.pizzaapp.features.pizzaDetail.PizzaDetailFragment"
+        android:label="pizzaDetail"
+        tools:layout="@layout/fragment_pizza_detail">
+        <action
+            android:id="@+id/action_pizzaDetail_to_successScreen"
+            app:destination="@id/successScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successScreen"
+        android:name="br.com.matheus.pizzaapp.features.successScreen.SuccessScreenFragment"
+        android:label="successScreen"
+        tools:layout="@layout/fragment_success_screen">
+        <action
+            android:id="@+id/action_successScreen_to_pizzaList"
+            app:destination="@id/pizzaList" />
+    </fragment>
+
+</navigation>

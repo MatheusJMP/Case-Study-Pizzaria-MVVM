@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PizzaApp</string>
+    <string name="text_enter_login">Entrar</string>
+    <string name="text_hint_user_input">Usuário</string>
+    <string name="text_hint_password_input">Senha</string>
+    <string name="text_button_enter">Entrar</string>
+    <string name="text_button_back">Voltar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_informative_pizza_card">a partir de</string>
+    <string name="error_try_again">Verifique os dados e tente novamente</string>
+    <string name="error_login">Erro ao efetuar login</string>
+    <string name="label_search">Buscar</string>
+    <string name="label_choose_ur_pizza">Escolha seu sabor</string>
+    <string name="size_p">P</string>
+    <string name="size_m">M</string>
+    <string name="size_g">G</string>
+    <string name="label_choose_size_pizza">Escolha o tamanho</string>
+    <string name="label_button_buy_pizza">Comprar</string>
+</resources>

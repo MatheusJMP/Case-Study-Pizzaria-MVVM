@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewPizzaClick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimenOf8dp"
+    app:cardBackgroundColor="#282C30"
+    app:cardCornerRadius="@dimen/dimenOf10dp"
+    app:cardElevation="@dimen/dimenOf16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewPizza"
+            android:layout_width="@dimen/dimenOf170dp"
+            android:layout_height="@dimen/dimenOf108dp"
+            android:background="@color/color_red_neon"
+            android:elevation="@dimen/dimenOf16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPizzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimenOf8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimenOf18sp"
+            app:layout_constraintStart_toEndOf="@id/imageViewPizza"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Pizza de sabor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLabelInformativePizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimenOf8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/label_informative_pizza_card"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/imageViewPizza"
+            app:layout_constraintTop_toBottomOf="@id/textViewPizzaName"
+            tools:text="a partir de" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPizzaPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimenOf8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimenOf18sp"
+            app:layout_constraintStart_toEndOf="@id/imageViewPizza"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelInformativePizza"
+            tools:text="R$ 100,00" />
+
+        <RatingBar
+            android:id="@+id/ratingBarPizza"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimenOf8dp"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="#FDC650"
+            android:rating="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

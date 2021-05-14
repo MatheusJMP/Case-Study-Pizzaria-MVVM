@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_dark"
+    tools:context=".features.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/none"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimenOf16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/none"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimenOf16dp" />
+
+        <View
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/none"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewLogoAuthScreen"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewLogoAuthScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenOf74dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="@dimen/dimenOf74dp"
+            app:srcCompat="@drawable/logo_app_png" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLabelInformativeLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenOf24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/text_enter_login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dimenOf24sp"
+            app:layout_constraintStart_toStartOf="@id/guideStart"
+            app:layout_constraintTop_toBottomOf="@id/imageViewLogoAuthScreen" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/textInputLayoutUser"
+            android:layout_width="@dimen/none"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/dimenOf24sp"
+            android:hint="@string/text_hint_user_input"
+            android:background="@drawable/shape_edit_text_corners"
+            app:layout_constraintEnd_toEndOf="@id/guideEnd"
+            android:padding="@dimen/dimenOf8dp"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/guideStart"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelInformativeLogin"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/textInputLayoutPassword"
+            android:layout_width="@dimen/none"
+            android:layout_height="50dp"
+            android:padding="@dimen/dimenOf8dp"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:inputType="numberPassword"
+            android:layout_marginTop="@dimen/dimenOf16dp"
+            android:hint="@string/text_hint_password_input"
+            android:background="@drawable/shape_edit_text_corners"
+            app:layout_constraintEnd_toEndOf="@id/guideEnd"
+            app:layout_constraintStart_toStartOf="@id/guideStart"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutUser"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimenOf56dp"
+            android:layout_marginTop="@dimen/dimenOf24dp"
+            android:layout_marginBottom="@dimen/dimenOf130dp"
+            android:background="@drawable/shape_button_corners"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/text_button_enter"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideEnd"
+            app:layout_constraintStart_toStartOf="@id/guideStart"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutPassword" />
+
+        <ProgressBar
+            android:id="@+id/loadingLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/color_green_neon"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dimenOf24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideEnd"
+            app:layout_constraintStart_toStartOf="@id/guideStart"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
